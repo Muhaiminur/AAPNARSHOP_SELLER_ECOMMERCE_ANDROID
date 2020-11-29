@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_yellow4"
+        android:orientation="vertical"
+        tools:context=".Fragment.authentication.SignIn">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp"
+                        android:contentDescription="@string/logo"
+                        android:src="@drawable/ic_aapnarshop_svg_01" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="20dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/sign_in_welcome_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/welcome"
+                            android:textColor="@color/app_black1"
+                            android:textSize="@dimen/font_huge"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/sign_in_aapnarshop_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/to_aapnershop"
+                            android:textColor="@color/app_black1"
+                            android:textSize="@dimen/font_xxxl" />
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/sign_in_phone_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:boxBackgroundColor="@color/app_yellow4">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/sign_in_phone_emil_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/phone_number_email"
+                            android:imeOptions="actionNext"
+                            android:textStyle="bold"
+                            app:errorEnabled="true"
+                            android:textSize="@dimen/font_xl" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout
+                           android:id="@+id/sign_in_password_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:passwordToggleEnabled="true"
+                            app:passwordToggleTint="@color/app_yellow"
+                            app:boxBackgroundColor="@color/app_yellow4">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/sign_in_password_et"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textPassword"
+                                app:errorEnabled="true"
+                                android:hint="@string/password"
+                                android:textSize="@dimen/font_xl"
+                                android:textStyle="bold" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:id="@+id/sign_in_forget_pas_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:padding="5dp"
+                            android:text="@string/forget_your_password"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/font_xl"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/sign_in_btn"
+                            android:layout_width="100dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:background="@drawable/yellow_background_capsul_shape_fill"
+                            android:text="@string/sign_in"
+                            android:textAllCaps="false"
+                            android:textColor="@color/app_black1"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+
+
+                        <TextView
+                            android:id="@+id/sign_in_message_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center"
+                            android:text="@string/do_you_have_any_shop"
+                            android:textColor="@color/app_black1"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/sign_in_registerForShop"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/register_for_online_shop"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/font_huge"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="bottom|center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="2dp"
+                            android:text="@string/by_signing_up_you_agree_with_the"
+                            android:textColor="@color/app_hint"
+                            android:textSize="@dimen/font_m"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp">
+
+
+                        <TextView
+                            android:id="@+id/text_terms_of_service"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="2dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:text="@string/terms_of_service"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/font_m"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="2dp"
+                            android:text="@string/and"
+                            android:textColor="@color/app_hint"
+                            android:textSize="@dimen/font_m"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/text_privacy_policy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:maxLines="3"
+                            android:text="@string/privacy_policy"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/font_m"
+                            android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

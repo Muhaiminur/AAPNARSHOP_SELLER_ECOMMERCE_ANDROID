@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/app_black4"
+        >
+
+        <ImageView
+            android:id="@+id/nav_menu_item_icon"
+            android:layout_width="@dimen/nav_menu_icon_height"
+            android:layout_height="@dimen/nav_menu_icon_height"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/nav_menu_margin_left"
+            android:contentDescription="@string/menu_icon"
+            android:src="@android:drawable/sym_def_app_icon"
+            app:tint="@color/app_white1" />
+
+        <TextView
+            android:id="@+id/nav_menu_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/nav_menu_margin_left"
+            android:gravity="center|left"
+            android:text="@string/menu"
+            android:textColor="@color/app_white1"
+            android:textSize="@dimen/nav_menu_title_textsize"
+            android:textStyle="bold"
+            tools:ignore="RtlHardcoded" />
+
+        <ImageView
+            android:id="@+id/nav_menu_item_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/forward_arrow"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+            app:tint="@color/app_white1" />
+
+        <LinearLayout
+            android:id="@+id/nav_item_language_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_marginStart="10dp"
+            android:orientation="horizontal">
+
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/recyclerview_nav_menu_item_en_bn_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/en"
+                android:theme="@style/ThemeOverlay.drawer"
+                android:textColor="@color/app_white1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bn"
+                android:textSize="@dimen/font_xl"
+                android:textColor="@color/app_white1"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/sub_menu_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+
+</LinearLayout>
+</layout>

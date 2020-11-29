@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/app_white3"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:weightSum="4"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/app_hint2" />
+
+        <ImageView
+            android:id="@+id/excludeInclude_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/potato"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:layout_weight="1"
+            android:text="@string/product_add"
+            android:textColor="@color/app_black1"
+            android:textSize="@dimen/font_xl"
+            android:textStyle="bold"/>
+
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/app_hint2" />
+
+        <TextView
+            android:id="@+id/excludeInclude_title"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:text="Potato "
+            android:maxLines="2"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:layout_marginStart="5dp"
+            android:textSize="@dimen/font_s"
+            android:layout_marginEnd="5dp"
+            android:textColor="@color/app_black1"
+
+            />
+
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/app_hint2" />
+
+        <TextView
+            android:id="@+id/excludeInclude_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="100 Kg"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textSize="@dimen/font_s"
+            android:textColor="@color/app_black1"/>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/app_hint2" />
+
+        <TextView
+            android:id="@+id/excludeInclude_status"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/yellow_background_capsul_shape_fill"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:text="@string/plus"
+            android:padding="2dp"
+            android:textSize="@dimen/font_xxxl"
+            android:textStyle="bold"
+            android:textColor="@color/app_black1"
+
+            />
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/app_hint2" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/app_white3" />
+
+
+</LinearLayout>
+</layout>

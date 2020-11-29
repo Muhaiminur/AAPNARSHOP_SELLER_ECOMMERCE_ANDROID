@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?actionBarSize"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/delivery_area_division_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/division"
+                    android:textStyle="bold" />
+
+                <FrameLayout
+                    android:id="@+id/delivery_area_division_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ash_background_rectangle_shape_stoke"
+                    android:orientation="horizontal">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/delivery_area_division_recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/delivery_area_select_division"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/select_division"
+                        android:textSize="@dimen/font_xl"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/delivery_area_division"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="end"
+                        android:padding="5dp"
+                        android:contentDescription="@string/dropdown"
+                        android:src="@drawable/ic_baseline_expand_more_24" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/delivery_area_district_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/district"
+                    android:textStyle="bold" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ash_background_rectangle_shape_stoke"
+                    android:orientation="horizontal">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/delivery_area_district_recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/delivery_area_select_district"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/select_district"
+                        android:textSize="@dimen/font_xl"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/delivery_area_district"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="end"
+                        android:padding="5dp"
+                        android:contentDescription="@string/dropdown"
+                        android:src="@drawable/ic_baseline_expand_more_24" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/delivery_area_city_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/city"
+                    android:textSize="@dimen/font_xl"
+                    android:textStyle="bold" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ash_background_rectangle_shape_stoke"
+                    android:orientation="horizontal">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/delivery_area_city_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/delivery_area_select_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/select_city"
+                        android:textSize="@dimen/font_xl"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/delivery_area_city"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="end"
+                        android:padding="5dp"
+                        android:contentDescription="@string/dropdown"
+                        android:src="@drawable/ic_baseline_expand_more_24" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/delivery_area_area_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/area"
+                    android:textStyle="bold" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/ash_background_rectangle_shape_stoke"
+                    android:orientation="horizontal">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/delivery_area_area_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/delivery_area_select_area"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/select_area"
+                        android:textSize="@dimen/font_xl"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/delivery_area_area"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="end"
+                        android:padding="5dp"
+                        android:contentDescription="@string/dropdown"
+                        android:src="@drawable/ic_baseline_expand_more_24" />
+
+                </FrameLayout>
+
+
+                <TextView
+                    android:id="@+id/delivery_area_save"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:text="@string/save"
+                    android:gravity="center"
+                    android:textSize="@dimen/font_xl"
+                    android:textStyle="bold"
+                    android:textColor="@color/app_black1"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/yellow_background_capsul_shape_fill"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+</layout>

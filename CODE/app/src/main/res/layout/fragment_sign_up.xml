@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/app_yellow4">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight=".5"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:id="@+id/sign_up_back_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:contentDescription="@string/back_arrow"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="5dp"
+                        android:src="@drawable/ic_back"
+                        app:tint="@color/app_black1"
+                        tools:ignore="RtlSymmetry" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="-20dp"
+                        android:layout_marginTop="10dp"
+                        android:contentDescription="@string/logo"
+                        android:src="@drawable/ic_aapnarshop_svg_01" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/welcome"
+                        android:textColor="@color/app_black1"
+                        android:textSize="@dimen/font_xxxl"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/to_aapnershop"
+                        android:textColor="@color/app_black1"
+                        android:textSize="@dimen/font_xxxl" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/sign_up_full_name_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxBackgroundColor="@color/app_yellow4">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/sign_up_full_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/full_name"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:textStyle="bold"
+                            app:errorEnabled="true"
+                            android:textSize="@dimen/font_xl" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/sign_up_phone_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxBackgroundColor="@color/app_yellow4">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                           android:id="@+id/sign_up_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/phone_number"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:textStyle="bold"
+                            app:errorEnabled="true"
+                            android:textSize="@dimen/font_xl" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/sign_up_email_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxBackgroundColor="@color/app_yellow4">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/sign_up_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/email"
+                            android:imeOptions="actionDone"
+                            android:inputType="textEmailAddress"
+                            android:textStyle="bold"
+                            app:errorEnabled="true"
+                            android:textSize="@dimen/font_xl" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sign_up_shop_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+
+                        android:background="@drawable/custom_spinner_underline"
+                        android:textAlignment="center" />
+                    <TextView
+                        android:id="@+id/sign_up_shop_category_error"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/deep_red"
+                        android:visibility="gone"
+                        android:textSize="@dimen/font_m"
+                        android:textStyle="bold"
+                        android:text="test"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/sign_up_shop_name_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxBackgroundColor="@color/app_yellow4">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/sign_up_shop_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/shop_name"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            app:errorEnabled="true"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/font_xl" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/sign_up_division"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/custom_spinner_underline"
+                            android:textAlignment="center" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/sign_up_district"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/custom_spinner_underline"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sign_up_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/custom_spinner_underline"
+                        android:textAlignment="center"
+                        tools:ignore="HardcodedText" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sign_up_area"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/custom_spinner_underline"
+                        android:textAlignment="center"
+                        tools:ignore="HardcodedText" />
+                    <TextView
+                        android:id="@+id/sign_up_area_error"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/deep_red"
+                        android:visibility="gone"
+                        android:textSize="@dimen/font_m"
+                        android:textStyle="bold"
+                        android:text="test"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/sign_up_shop_address_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxBackgroundColor="@color/app_yellow4">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/sign_up_shop_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/shop_address"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:textStyle="bold"
+                            app:errorEnabled="true"
+                            android:textSize="@dimen/font_xl" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/sign_up"
+                        android:layout_width="100dp"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/yellow_background_capsul_shape_fill"
+                        android:text="@string/sign_up"
+                        android:gravity="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/app_black1"
+                        android:textSize="@dimen/font_xl"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="bottom|center"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/by_signing_up_you_agree_with_the"
+                            android:textSize="12sp"
+                            android:textColor="@color/app_hint"
+                            android:textStyle="bold"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="2dp" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp">
+
+
+                        <TextView
+                            android:id="@+id/text_terms_of_service"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:textSize="@dimen/font_m"
+                            android:layout_marginEnd="2dp"
+                            android:text="@string/terms_of_service"
+                            android:textStyle="bold"
+                            android:textColor="@color/blue" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/and"
+                            android:textColor="@color/app_hint"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/font_m"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginStart="2dp"/>
+                        <TextView
+                            android:id="@+id/text_privacy_policy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:textSize="@dimen/font_m"
+                            android:text="@string/privacy_policy"
+                            android:textStyle="bold"
+                            android:textColor="@color/blue" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+        <!--   <TextView
+               android:id="@+id/terms"
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:gravity="bottom"
+               android:layout_marginBottom="10dp"
+               android:layout_marginStart="20dp"
+               android:layout_marginEnd="20dp"
+               android:text="@string/by_signing_up_you_agree_with_the_terms_of_service_and_privacy_policy"
+               android:textStyle="bold" />-->
+
+
+    </LinearLayout>
+
+</layout>
