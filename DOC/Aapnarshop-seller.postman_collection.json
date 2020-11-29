@@ -1,0 +1,1776 @@
+{
+	"info": {
+		"_postman_id": "17d12318-7b40-481c-a7c3-0f9b003fcbbc",
+		"name": "Aapnarshop-seller",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "password change",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "UserId",
+								"value": "{{userId}}",
+								"type": "text"
+							},
+							{
+								"key": "Token",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Language",
+								"value": "{{language}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldPin\":\"1234\",\r\n    \"newPin\":\"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/password/change",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"password",
+								"change"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forget password",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "UserId",
+								"value": "{{defaultUserId}}",
+								"type": "text"
+							},
+							{
+								"key": "Token",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Language",
+								"value": "{{language}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"01772141693\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/password/forget",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"password",
+								"forget"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "UserId",
+								"value": "{{userId}}",
+								"type": "text"
+							},
+							{
+								"key": "Token",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Language",
+								"value": "{{language}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"userName\":\"01772141693\",\r\n   \"password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registration",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "UserId",
+								"type": "text",
+								"value": "{{userId}}"
+							},
+							{
+								"key": "Token",
+								"type": "text",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Language",
+								"value": "{{language}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sellerName\":\"Nowshad\",\r\n    \"phone\":\"01772141613\",\r\n    \"email\":\"nowshasd@gtechcp.com\",\r\n    \"shopType\":\"1\",\r\n    \"shopName\":\"nowshad-shop\",\r\n    \"areaId\":\"1\",\r\n    \"address\":\"ajsdhf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/registration",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"registration"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "profile",
+			"item": [
+				{
+					"name": "get settings",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "UserId",
+								"value": "{{userId}}",
+								"type": "text"
+							},
+							{
+								"key": "Token",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Language",
+								"value": "{{language}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/shop/settings",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"shop",
+								"settings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "seller rating",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "UserId",
+								"value": "{{userId}}",
+								"type": "text"
+							},
+							{
+								"key": "Token",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Language",
+								"value": "{{language}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/rating",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"rating"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "dashboard",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "UserId",
+								"value": "{{userId}}",
+								"type": "text"
+							},
+							{
+								"key": "Token",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Language",
+								"value": "{{language}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/dashboard",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"dashboard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get delivery area",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "UserId",
+								"value": "{{userId}}",
+								"type": "text"
+							},
+							{
+								"key": "Token",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Language",
+								"value": "{{language}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/delivery/area",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"delivery",
+								"area"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "settings update",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "UserId",
+								"type": "text",
+								"value": "{{userId}}"
+							},
+							{
+								"key": "Token",
+								"type": "text",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Language",
+								"value": "{{language}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"minimumBuy\": \"50.0\",\r\n    \"maxDeliveryTime\": \"13.0\",\r\n    \"deliveryCharge\": \"15.0\",\r\n    \"weightLimit\": \"25.0\",\r\n    \"schedule\":{\r\n        \"sun\":\"00:09-22:00\",\r\n        \"mon\":\"10:00-23:59\",\r\n        \"tue\":\"00:00-23:00\",\r\n        \"wed\":\"00:00-23:00\",\r\n        \"thu\":\"00:00-23:00\",\r\n        \"fri\":\"0\",\r\n        \"sat\":\"12:00-21:00\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/shop/settings/update",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"shop",
+								"settings",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload profileImage",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "UserId",
+								"value": "{{userId}}",
+								"type": "text"
+							},
+							{
+								"key": "Token",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Language",
+								"value": "{{language}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userImage",
+									"type": "file",
+									"src": "/C:/Users/USER/Pictures/Saved Pictures/water bulb.jpg"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/profile/image/update",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"profile",
+								"image",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update delivery area",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "UserId",
+								"value": "{{userId}}",
+								"type": "text"
+							},
+							{
+								"key": "Token",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Language",
+								"value": "{{language}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"division\": \"1,6\",\r\n    \"area\": \"59,60\",\r\n    \"city\": \"210\",\r\n    \"district\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/delivery/area/update",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"delivery",
+								"area",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "config",
+			"item": [
+				{
+					"name": "get shop category",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "UserId",
+								"value": "{{userId}}",
+								"type": "text"
+							},
+							{
+								"key": "Token",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Language",
+								"value": "{{language}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/shop/category",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"shop",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "config",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "UserId",
+								"value": "{{userId}}",
+								"type": "text"
+							},
+							{
+								"key": "Token",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Language",
+								"value": "{{language}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/config",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"config"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "location",
+			"item": [
+				{
+					"name": "division list",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "UserId",
+								"value": "{{userId}}",
+								"type": "text"
+							},
+							{
+								"key": "Token",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Language",
+								"value": "{{language}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/location/division",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"location",
+								"division"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "city list",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "UserId",
+								"value": "{{userId}}",
+								"type": "text"
+							},
+							{
+								"key": "Token",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Language",
+								"value": "{{language}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"districtId\":\"2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/location/city",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"location",
+								"city"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "area list",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "UserId",
+								"value": "{{userId}}",
+								"type": "text"
+							},
+							{
+								"key": "Token",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Language",
+								"value": "{{language}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cityId\":\"2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/location/area",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"location",
+								"area"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "district list",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "UserId",
+								"value": "{{userId}}",
+								"type": "text"
+							},
+							{
+								"key": "Token",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Language",
+								"value": "{{language}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"divisionId\":\"2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/location/district",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"location",
+								"district"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "product supplier list",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "UserId",
+								"value": "{{userId}}",
+								"type": "text"
+							},
+							{
+								"key": "Token",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Language",
+								"value": "{{language}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/product/supplier/all?title=tr",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								"supplier",
+								"all"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "tr"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product category list",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "UserId",
+								"value": "{{userId}}",
+								"type": "text"
+							},
+							{
+								"key": "Token",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Language",
+								"value": "{{language}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/product/category/all?title=fe",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								"category",
+								"all"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "fe"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "unit list",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "UserId",
+								"value": "{{userId}}",
+								"type": "text"
+							},
+							{
+								"key": "Token",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Language",
+								"value": "{{language}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/unit/all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"unit",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product list",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "UserId",
+								"value": "{{userId}}",
+								"type": "text"
+							},
+							{
+								"key": "Token",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Language",
+								"value": "{{language}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"filterBy\":\"old\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/product/all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product create",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "UserId",
+								"value": "{{userId}}",
+								"type": "text"
+							},
+							{
+								"key": "Token",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Language",
+								"value": "{{language}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category",
+									"value": "febrics",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "lcd",
+									"type": "text"
+								},
+								{
+									"key": "brand",
+									"value": "Panasonic",
+									"type": "text"
+								},
+								{
+									"key": "supplier",
+									"value": "Karim vai",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Panasonic TV",
+									"type": "text"
+								},
+								{
+									"key": "size",
+									"value": "12*23",
+									"type": "text"
+								},
+								{
+									"key": "unitType",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "unitQuantity",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "unitWeightType",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "unitWeightQuantity",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "unitPrice",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "totalQuantity",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "totalPrice",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "OK",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/USER/Pictures/Saved Pictures/water bulb.jpg"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/USER/Pictures/Saved Pictures/water bulb.jpg"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/product/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product update",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "UserId",
+								"value": "{{userId}}",
+								"type": "text"
+							},
+							{
+								"key": "Token",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Language",
+								"value": "{{language}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "productId",
+									"value": "17",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "febrics",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "lcd",
+									"type": "text"
+								},
+								{
+									"key": "brand",
+									"value": "Panasonic",
+									"type": "text"
+								},
+								{
+									"key": "supplier",
+									"value": "Karim vai",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Sony TV",
+									"type": "text"
+								},
+								{
+									"key": "size",
+									"value": "12*23 Inch",
+									"type": "text"
+								},
+								{
+									"key": "unitType",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "unitQuantity",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "unitWeightType",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "unitWeightQuantity",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "unitPrice",
+									"value": "15",
+									"type": "text"
+								},
+								{
+									"key": "totalQuantity",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "totalPrice",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "OK",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"value": "http://116.212.109.34:9090/content/resources/product/17/17_1_1602157209653.jpg",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"value": "http://116.212.109.34:9090/content/resources/product/17/17_1_1602157209652.jpg",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/USER/Pictures/Saved Pictures/water bulb.jpg"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/product/update",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product brand list",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "UserId",
+								"value": "{{userId}}",
+								"type": "text"
+							},
+							{
+								"key": "Token",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Language",
+								"value": "{{language}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"typeId\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/product/brand/all?title=L",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								"brand",
+								"all"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "L"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product type list",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "UserId",
+								"value": "{{userId}}",
+								"type": "text"
+							},
+							{
+								"key": "Token",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Language",
+								"value": "{{language}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoryId\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/product/type/all?title=lcd",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								"type",
+								"all"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "lcd"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product details",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "UserId",
+								"value": "{{userId}}",
+								"type": "text"
+							},
+							{
+								"key": "Token",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Language",
+								"value": "{{language}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/product",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product status update",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "UserId",
+								"type": "text",
+								"value": "{{userId}}"
+							},
+							{
+								"key": "Token",
+								"type": "text",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Language",
+								"value": "{{language}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\":\"15\",\r\n    \"status\":\"INACTIVE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/product/status/update",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								"status",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update product quantity",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "UserId",
+								"value": "{{userId}}",
+								"type": "text"
+							},
+							{
+								"key": "Token",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Language",
+								"value": "{{language}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\":\"1\",\r\n    \"quantity\":\"6\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/product/quantity/update",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								"quantity",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
